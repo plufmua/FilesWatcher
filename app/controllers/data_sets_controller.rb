@@ -1,7 +1,7 @@
 class DataSetsController < ApplicationController
 
   def index
-    @data_sets = DataSet.all.per(20)
+    @data_sets = DataSet.page(params[:page])
   end
 
   def show
