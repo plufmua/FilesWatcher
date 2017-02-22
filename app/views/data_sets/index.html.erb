@@ -1,0 +1,36 @@
+<h1>Files</h1>
+<div class="col-sm-8">
+  <table class="table table-stripped">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Route</th>
+      <th>Creating date</th>
+      <th>Updating date</th>
+      <th>Owner</th>
+      <th>Group</th>
+      <th>Permissions</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @data_sets.each do |data_set| %>
+        <tr>
+          <td><%= data_set.name %></td>
+          <td><%= data_set.size %></td>
+          <td><%= data_set.route %></td>
+          <td><%= data_set.creating_date %></td>
+          <td><%= data_set.updating_date %></td>
+          <td><%= data_set.owner %></td>
+          <td><%= data_set.group %></td>
+          <td><%= data_set.permissions %></td>
+        </tr>
+    <% end %>
+    </tbody>
+    <%= paginate @data_sets %>
+  </table>
+
+  <br>
+  <%=link_to 'Update info', class: 'btn btn-default' %>
+</div>
