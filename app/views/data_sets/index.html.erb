@@ -11,6 +11,7 @@
         <th>Owner</th>
         <th>Group</th>
         <th>Permissions</th>
+        <th></th>
       </tr>
     </thead>
 
@@ -25,11 +26,12 @@
             <td><%= data_set.owner %></td>
             <td><%= data_set.group %></td>
             <td><%= data_set.permissions %></td>
+            <td><%= link_to 'Show', data_set, class: 'btn btn-default' %></td>
           </tr>
       <% end %>
     </tbody>
     <%= paginate @data_sets %>
   </table>
   <br>
-  <%= link_to 'Update info', class: 'btn btn-default' %>
+  <%= link_to 'Update info', update_files_data_sets_path, class: 'btn btn-default' %>
 </div>
