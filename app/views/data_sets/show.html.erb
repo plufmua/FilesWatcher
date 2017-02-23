@@ -1,38 +1,21 @@
 <h1>File info</h1>
-
 <div class="col-sm-8">
-  <table class="table table-default">
-    <tr>
-      <td>Name</td>
-      <td><%= @data_set.name %></td>
-    </tr>
-    <tr>
-      <td>Size</td>
-      <td><%= @data_set.size %></td>
-    </tr>
-    <tr>
-      <td>Route</td>
-      <td><%= @data_set.route %></td>
-    </tr>
-    <tr>
-      <td>Creating date</td>
-      <td><%= @data_set.creating_date %></td>
-    </tr>
-    <tr>
-      <td>Updating date</td>
-      <td><%= @data_set.updating_date %></td>
-    </tr>
-    <tr>
-      <td>Owner</td>
-      <td><%= @data_set.owner %></td>
-    </tr>
-    <tr>
-      <td>Group</td>
-      <td><%= @data_set.group %></td>
-    </tr>
-    <tr>
-      <td>Permissions</td>
-      <td><%= @data_set.permissions %></td>
-    </tr>
-  </table>
-  </div>
+  <dl>
+    <dt>Name</dt>
+    <dd><%= @data_set.name %></dd>
+    <dt>Size</dt>
+    <dd><%= @data_set.size %></dd>
+    <dt>Absolute Path</dt>
+    <dd><%= @data_set.absolute_path %></dd>
+    <dt>Creation Time</dt>
+    <dd><%= @data_set.creation_time %></dd>
+    <dt>Updating Time</dt>
+    <dd><%= @data_set.updating_time %></dd>
+    <dt>Owner</dt>
+    <dd><%= @data_set.owner %></dd>
+    <dt>Group</dt>
+    <dd><%= @data_set.group %></dd>
+    <dt>Permissions</dt>
+    <dd><%= @data_set.permissions %></dd>
+  </dl>
+</div>

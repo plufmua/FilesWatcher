@@ -7,8 +7,8 @@ module ApplicationHelper
         'alert-danger'
       when 'alert'
         'alert-warning'
-        else
-          flash_type.to_s
+      else
+        flash_type.to_s
     end
   end
 end

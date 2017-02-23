@@ -17,10 +17,10 @@ ActiveRecord::Schema.define(version: 20170222103229) do
 
   create_table "data_sets", force: :cascade do |t|
     t.string   "name",          null: false
-    t.string   "size",          null: false
-    t.string   "route",         null: false
-    t.datetime "creating_date", null: false
-    t.datetime "updating_date", null: false
+    t.bigint   "size",          null: false
+    t.string   "absolute_path", null: false
+    t.datetime "creation_time", null: false
+    t.datetime "updating_time", null: false
     t.string   "owner",         null: false
     t.string   "group",         null: false
     t.integer  "permissions",   null: false
