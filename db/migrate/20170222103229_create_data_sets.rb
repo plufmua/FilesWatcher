@@ -4,7 +4,6 @@ class CreateDataSets < ActiveRecord::Migration[5.0]
       t.string   :name, null: false
       t.bigint   :size, null: false
       t.string   :absolute_path, null: false
-      t.datetime :creation_time, null: false
       t.datetime :updating_time, null: false
       t.string   :owner, null: false
       t.string   :group, null: false
