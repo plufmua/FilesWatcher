@@ -1,0 +1,14 @@
+default: &default
+  tracked_directories:
+    - "/home/zharko/Untitled Folder"
+    - "/home/zharko/qewe"
+    - "/home/zharko/Music"
+
+production:
+  <<: *default
+
+development:
+  <<: *default
+
+test:
+  <<: *default
