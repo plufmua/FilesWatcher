@@ -9,9 +9,9 @@ class DataSetsController < ApplicationController
   def show
     @data_set = DataSet.find(params[:id])
   end
-  # method to update files in database
+  # method to run Sidekiq job and update files in database
   def update_files
-    update_tracked_files
+    UpdateFilesJob.perform_now
     redirect_to root_path
   end
 end
