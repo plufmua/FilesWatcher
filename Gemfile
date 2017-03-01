@@ -21,6 +21,7 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 gem 'kaminari'
 gem 'sidekiq'
+gem 'figaro'
 gem 'whenever', require: false
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

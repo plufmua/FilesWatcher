@@ -1,10 +1,7 @@
 class UpdateFilesJob < ApplicationJob
-  include DataSetsHelper
   queue_as :default
 
-
-  def perform(*args)
-
-    update_tracked_files
+  def perform(*_args)
+    FilesWatcherService.new
   end
 end
