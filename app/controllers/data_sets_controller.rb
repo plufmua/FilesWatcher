@@ -11,7 +11,7 @@ class DataSetsController < ApplicationController
 
   # method to run Sidekiq job and update files in database
   def update_files
-    UpdateFilesJob.perform_now
+    UpdateFilesWorker.perform_async
     redirect_to root_path
   end
 end

@@ -1,5 +1,5 @@
 namespace :files_watcher do
   task update_info: :environment do
-    UpdateFilesJob.perform_now
+    UpdateFilesWorker.perform_async
   end
 end
