@@ -4,9 +4,6 @@ default: &default
     - "/home/zharko/qewe"
     - "/home/zharko/Music"
 
-production:
-  <<: *default
-
 development:
   <<: *default
 

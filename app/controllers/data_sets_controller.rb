@@ -1,5 +1,4 @@
 class DataSetsController < ApplicationController
-  include DataSetsHelper
   require 'etc'
 
   def index
@@ -9,6 +8,7 @@ class DataSetsController < ApplicationController
   def show
     @data_set = DataSet.find(params[:id])
   end
+
   # method to run Sidekiq job and update files in database
   def update_files
     UpdateFilesJob.perform_now
