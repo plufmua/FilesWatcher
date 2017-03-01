@@ -8,7 +8,8 @@ class FilesWatcherService
 
   def update_tracked_files
     @data_sets = DataSet.all.to_a
-    APP_CONFIG['tracked_directories'].each do |path|
+    splited = ENV["tracked_directories"].scan(/[\/.*\.[\w:\s]+]+/)
+    splited.each do |path|
       if Dir.exist? path
         Dir.glob(File.join(path, '**', '*')).each do |file|
           next unless File.file?(file)
