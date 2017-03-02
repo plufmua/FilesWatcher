@@ -22,5 +22,5 @@
 set :environment, 'development'
 
 every 1.day do
-  rake "files_watcher:update_info"
+  rake 'files_watcher:update_info'
 end

@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20170222103229) do
     t.integer  "permissions",   null: false
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.index ["name", "absolute_path"], name: "index_data_sets_on_name_and_absolute_path", unique: true, using: :btree
   end
 
 end

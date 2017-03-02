@@ -9,6 +9,7 @@ class CreateDataSets < ActiveRecord::Migration[5.0]
       t.string   :group, null: false
       t.integer  :permissions, null: false
 
+      t.index  [:name, :absolute_path], unique: true
       t.timestamps
     end
   end
