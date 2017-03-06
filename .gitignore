@@ -19,4 +19,4 @@
 .byebug_history
 
 # Ignore application configuration
-/.env
+/.env.development
