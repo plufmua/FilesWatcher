@@ -20,3 +20,4 @@
 
 # Ignore application configuration
 /.env.development
+/config/files_watcher.yml

@@ -1,0 +1,11 @@
+default: &default
+
+  tracked_directories:
+    - '/path/to/tracked/directory'
+    - '/path/to/another/tracked/directory'
+
+development:
+  <<: *default
+
+test:
+  <<: *default
