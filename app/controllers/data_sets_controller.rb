@@ -1,5 +1,4 @@
 class DataSetsController < ApplicationController
-  require 'etc'
 
   def index
     @data_sets = DataSet.page(params[:page]).order(absolute_path: :asc)

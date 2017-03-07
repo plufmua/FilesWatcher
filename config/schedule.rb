@@ -21,6 +21,6 @@
 
 set :environment, 'development'
 
-every 1.day do
+every 1.minute do
   rake 'files_watcher:update_info'
 end
